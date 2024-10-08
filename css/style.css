@@ -1,0 +1,52 @@
+body {
+  background-color: #460505;
+  color: white;
+  margin: 0;
+}
+h1,
+h2 {
+  color: red;
+  text-align: center;
+}
+h1 {
+  text-transform: uppercase;
+}
+p {
+  text-align: justify;
+}
+header {
+  background-color: azure;
+  color: black;
+}
+main {
+  margin: auto 20%;
+}
+footer {
+  background-color: azure;
+}
+.destaque {
+  background-color: brown;
+  color: azure;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+#img-logo {
+  width: 50px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+nav li {
+  display: inline;
+  margin-left: 20px;
+  color: #af1212;
+  font-weight: bold;
+  border: 2px solid #af1212;
+  padding: 5px;
+}
+nav {
+  float: right;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
