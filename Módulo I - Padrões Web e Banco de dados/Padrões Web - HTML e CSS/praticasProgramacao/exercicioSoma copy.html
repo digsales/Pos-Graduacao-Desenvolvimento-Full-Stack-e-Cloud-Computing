@@ -6,7 +6,9 @@
     <title>Exercício Soma HTML</title>
     <script>
       function somar() {
-        console.log("Chamou funcão somar");
+        const n1 = Number(document.getElementById("n1").value);
+        const n2 = Number(document.getElementById("n2").value);
+        console.log(`Soma: ${n1 + n2}`);
       }
     </script>
   </head>
