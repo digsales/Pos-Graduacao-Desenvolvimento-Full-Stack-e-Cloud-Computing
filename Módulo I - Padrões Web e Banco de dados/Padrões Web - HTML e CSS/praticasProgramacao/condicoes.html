@@ -16,12 +16,10 @@
 
         if (media >= 7) {
           document.getElementById("resultado").innerHTML = "Aprovado!";
+        } else if (media < 5) {
+          document.getElementById("resultado").innerHTML = "Reprovado!";
         } else {
-          if (media < 5) {
-            document.getElementById("resultado").innerHTML = "Reprovado!";
-          } else {
-            document.getElementById("resultado").innerHTML = "Recuperação!";
-          }
+          document.getElementById("resultado").innerHTML = "Recuperação!";
         }
 
         document.getElementById("mostrarMedia").innerHTML = `Média final: ${media}`;
