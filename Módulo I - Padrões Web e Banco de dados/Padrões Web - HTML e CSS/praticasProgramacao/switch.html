@@ -31,10 +31,15 @@
           case "Presidente":
             aumento = 0.1;
             break;
+          default:
+            alert("Digite um cargo válido!");
         }
-
-        document.getElementById("mostrarCargo").innerHTML = `Cargo: ${cargo}`;
-        document.getElementById("mostrarAumento").innerHTML = `Aumento de ${aumento * 100}%, seu novo salário é de R$${(salario * (1 + aumento)).toFixed(2)}.`;
+        if (salario <= 0 || salario == null) {
+          alert("Digite um salário válido!");
+        } else if (aumento != 0) {
+          document.getElementById("mostrarCargo").innerHTML = `Cargo: ${cargo}`;
+          document.getElementById("mostrarAumento").innerHTML = `Aumento de ${aumento * 100}%, seu novo salário é de R$${(salario * (1 + aumento)).toFixed(2)}.`;
+        }
       }
     </script>
   </head>
