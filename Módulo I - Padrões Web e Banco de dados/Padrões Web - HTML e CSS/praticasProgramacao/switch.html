@@ -40,7 +40,13 @@
   </head>
   <body>
     <form action="">
-      Cargo: <input id="cargo" type="text" />
+      Cargo: <input id="cargo" type="text" list="valores" />
+      <datalist id="valores">
+        <option value="Estagiário"></option>
+        <option value="Analista"></option>
+        <option value="Gerente"></option>
+        <option value="Presidente"></option>
+      </datalist>
       <br />
       Salário: <input id="salario" type="number" />
       <br />
