@@ -4,6 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Estrutura Switch</title>
+    <script>
+      /*
+      Verificar o aumento de sálario de acordo com os seguintes cargos:
+      - Estagiário: 100%
+      - Analista: 50%
+      - Gerente: 30%
+      - Presidente: 10%
+      */
+
+      const cargo = "Estagiário";
+      var aumento = 0;
+
+      switch (cargo) {
+        case "Estagiário":
+          aumento = 1;
+          break;
+        case "Analista":
+          aumento = 0.5;
+          break;
+        case "Gerente":
+          aumento = 0.3;
+          break;
+        case "Presidente":
+          aumento = 0.1;
+          break;
+      }
+    </script>
   </head>
   <body></body>
 </html>
