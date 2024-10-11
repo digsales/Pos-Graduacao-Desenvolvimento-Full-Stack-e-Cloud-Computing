@@ -34,7 +34,7 @@
         }
 
         document.getElementById("mostrarCargo").innerHTML = `Cargo: ${cargo}`;
-        document.getElementById("mostrarAumento").innerHTML = `Aumento de ${aumento * 100}%, seu novo salário é de ${salario * (1 + aumento)}`;
+        document.getElementById("mostrarAumento").innerHTML = `Aumento de ${aumento * 100}%, seu novo salário é de R$${(salario * (1 + aumento)).toFixed(2)}.`;
       }
     </script>
   </head>
