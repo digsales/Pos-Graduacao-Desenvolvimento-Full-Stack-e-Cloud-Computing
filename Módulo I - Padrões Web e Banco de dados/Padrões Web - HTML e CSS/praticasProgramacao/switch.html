@@ -13,24 +13,40 @@
       - Presidente: 10%
       */
 
-      const cargo = "Estagiário";
-      var aumento = 0;
+      function verificar() {
+        const cargo = document.getElementById("cargo").value;
+        const salario = document.getElementById("salario").value;
+        var aumento = 0;
 
-      switch (cargo) {
-        case "Estagiário":
-          aumento = 1;
-          break;
-        case "Analista":
-          aumento = 0.5;
-          break;
-        case "Gerente":
-          aumento = 0.3;
-          break;
-        case "Presidente":
-          aumento = 0.1;
-          break;
+        switch (cargo) {
+          case "Estagiário":
+            aumento = 1;
+            break;
+          case "Analista":
+            aumento = 0.5;
+            break;
+          case "Gerente":
+            aumento = 0.3;
+            break;
+          case "Presidente":
+            aumento = 0.1;
+            break;
+        }
+
+        document.getElementById("mostrarCargo").innerHTML = `Cargo: ${cargo}`;
+        document.getElementById("mostrarAumento").innerHTML = `Aumento de ${aumento * 100}%, seu novo salário é de ${salario * (1 + aumento)}`;
       }
     </script>
   </head>
-  <body></body>
+  <body>
+    <form action="">
+      Cargo: <input id="cargo" type="text" />
+      <br />
+      Salário: <input id="salario" type="number" />
+      <br />
+      <button type="button" onclick="verificar()">Verificar</button>
+    </form>
+    <h1 id="mostrarCargo"></h1>
+    <h2 id="mostrarAumento"></h2>
+  </body>
 </html>
