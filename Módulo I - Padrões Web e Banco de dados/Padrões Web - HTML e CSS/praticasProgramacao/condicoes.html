@@ -5,16 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Estruturas de Condição</title>
     <script>
-      const n1 = Number(prompt("Digite a nota 1:"));
-      const n2 = Number(prompt("Digite a nota 2:"));
-      const n3 = Number(prompt("Digite a nota 3:"));
-      const n4 = Number(prompt("Digite a nota 4:"));
+      function verificar() {
+        const n1 = Number(document.getElementById("n1").value);
+        const n2 = Number(document.getElementById("n2").value);
+        const n3 = Number(document.getElementById("n3").value);
+        const n4 = Number(document.getElementById("n4").value);
 
-      const soma = n1 + n2 + n3 + n4;
-      const media = soma / 4;
+        const soma = n1 + n2 + n3 + n4;
+        const media = soma / 4;
 
-      console.log(`A média final é ${media}`);
+        if (media >= 7) {
+          document.getElementById("resultado").innerHTML = "Aprovado!";
+        } else {
+          document.getElementById("resultado").innerHTML = "Reprovado!";
+        }
+
+        document.getElementById("mostrarMedia").innerHTML = `Média final: ${media}`;
+      }
     </script>
   </head>
-  <body></body>
+  <body>
+    <form action="">
+      N1: <input id="n1" type="text" />
+      <br />
+      N2: <input id="n2" type="text" />
+      <br />
+      N3: <input id="n3" type="text" />
+      <br />
+      N4: <input id="n4" type="text" />
+      <br />
+      <button type="button" onclick="verificar()">Verificar</button>
+    </form>
+    <h1 id="resultado"></h1>
+    <h2 id="mostrarMedia"></h2>
+  </body>
 </html>
