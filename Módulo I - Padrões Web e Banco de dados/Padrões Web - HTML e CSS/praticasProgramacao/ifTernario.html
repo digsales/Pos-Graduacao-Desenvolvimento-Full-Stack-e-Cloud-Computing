@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estruturas de Condição</title>
+    <script>
+      function verificar() {
+        const n1 = Number(document.getElementById("n1").value);
+        const n2 = Number(document.getElementById("n2").value);
+        const n3 = Number(document.getElementById("n3").value);
+        const n4 = Number(document.getElementById("n4").value);
+
+        const soma = n1 + n2 + n3 + n4;
+        const media = soma / 4;
+
+        // IF ternário - (condição) ? (if) : (else)
+
+        media >= 7 ? (document.getElementById("resultado").innerHTML = "Aprovado!") : (document.getElementById("resultado").innerHTML = "Reprovado!");
+
+        document.getElementById("mostrarMedia").innerHTML = `Média final: ${media}`;
+      }
+    </script>
+  </head>
+  <body>
+    <form action="">
+      N1: <input id="n1" type="text" />
+      <br />
+      N2: <input id="n2" type="text" />
+      <br />
+      N3: <input id="n3" type="text" />
+      <br />
+      N4: <input id="n4" type="text" />
+      <br />
+      <button type="button" onclick="verificar()">Verificar</button>
+    </form>
+    <h1 id="resultado"></h1>
+    <h2 id="mostrarMedia"></h2>
+  </body>
+</html>
