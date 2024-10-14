@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Estruturas de Repetição - For In</title>
     <script>
-      const pesoa = {
+      const pessoa = {
         nome: "Diogo",
         telefone: "(61) 98421-2998",
         endereco: "ABC",
       };
+
       const carros = ["Gol", "Fusca", "Virtus", "Ka"];
+
+      // console.log(pessoa.nome);
+      // console.log(pessoa["nome"]);
+
+      for (var prop in pessoa) {
+        console.log(prop);
+      } // prop = propriedade
     </script>
   </head>
   <body></body>
