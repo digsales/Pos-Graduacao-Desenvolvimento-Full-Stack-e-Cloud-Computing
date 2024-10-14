@@ -11,14 +11,22 @@
         endereco: "ABC",
       };
 
-      const carros = ["Gol", "Fusca", "Virtus", "Ka"];
+      // for in
 
       // console.log(pessoa.nome);
       // console.log(pessoa["nome"]);
 
-      for (var prop in pessoa) {
-        console.log(prop);
-      } // prop = propriedade
+      // for (var prop in pessoa) {
+      //   console.log(`${prop} -> ${pessoa[prop]}`);
+      // } // prop = propriedade
+
+      const carros = ["Gol", "Fusca", "Virtus", "Ka"];
+
+      // for of
+
+      for (var carro of carros) {
+        console.log(carro);
+      }
     </script>
   </head>
   <body></body>
