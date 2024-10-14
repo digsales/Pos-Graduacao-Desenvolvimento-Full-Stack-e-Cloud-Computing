@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estruturas de Repetição</title>
+    <script>
+      var i = 1;
+      const qtd = Number(prompt("Número de provas: "));
+      var soma = 0;
+      var nota = 0;
+
+      while (i <= qtd) {
+        do {
+          nota = Number(prompt(`Digite a nota ${i}: `));
+        } while (nota > 10);
+        // nota = Number(prompt(`Digite a nota ${i}: `));
+        soma += nota;
+        i++; // incremento
+      }
+
+      const media = soma / qtd;
+      console.log(`Sua média é ${media.toFixed(2)}.`);
+
+      const resultado = media >= 7 ? "Aprovado." : "Reprovado.";
+      console.log(`Resultado: ${resultado}`);
+    </script>
+  </head>
+  <body></body>
+</html>
