@@ -3,20 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Estruturas de Repetição</title>
+    <title>Estruturas de Repetição - For</title>
     <script>
-      var i = 1;
       const qtd = Number(prompt("Número de provas: "));
       var soma = 0;
       var nota = 0;
 
-      while (i <= qtd) {
-        do {
-          nota = Number(prompt(`Digite a nota ${i}: `));
-        } while (nota > 10);
-        // nota = Number(prompt(`Digite a nota ${i}: `));
+      for (var i = 1; i <= qtd; i++) {
+        nota = Number(prompt(`Digite a nota ${i}: `));
         soma += nota;
-        i++; // incremento
       }
 
       const media = soma / qtd;
