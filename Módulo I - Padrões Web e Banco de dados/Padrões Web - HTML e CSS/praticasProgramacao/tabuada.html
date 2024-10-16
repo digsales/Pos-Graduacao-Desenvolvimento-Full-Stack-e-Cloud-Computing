@@ -6,11 +6,15 @@
     <title>Tabuada</title>
   </head>
   <script>
-    var num = Number(prompt("Digite o número para ver sua tabuada: "));
+    // const num = Number(prompt("Digite o número para ver sua tabuada: "));
 
-    for (let i = 0; i <= 10; i++) {
-      let resultado = num * i;
-      console.log(`${num} x ${i} = ${resultado}`);
+    for (let num = 0; num <= 10; num++) {
+      console.log(`----- Tabuada do ${num} -----`);
+
+      for (let i = 0; i <= 10; i++) {
+        let resultado = num * i;
+        console.log(`${num} x ${i} = ${resultado}`);
+      }
     }
   </script>
   <body></body>
