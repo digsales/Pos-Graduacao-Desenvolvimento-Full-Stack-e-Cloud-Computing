@@ -7,9 +7,27 @@
     <script>
       const carros = ["Gol", "Fusca", "Virtus", "Ka"];
 
-      console.log(carros); // linha
-      console.table(carros); // tabela
-      console.log(carros[1]); // mostra item específico
+      // console.log(carros); // linha
+      // console.table(carros); // tabela
+      // console.log(carros[1]); // mostra item específico
+
+      // for (let carro of carros) {
+      //   console.log(carro);
+      // }
+
+      carros.push("Fiesta"); // add no final
+      carros.unshift("Palio"); // add no inicio
+      carros.pop(); // tira do final
+      carros.shift(); // tira do inicio
+      carros.splice(); // add, tira ou edita itens do array
+      carros.splice(2, 1); // vai no item 2 e exclui 1 item
+      carros.splice(1, 0, "Uno"); // vai no item 1, exlui 0 itens e add "Uno"
+      carros.splice(1, 1, "Fox"); // vai no item 1, exclui 1 item e add "Fox", editou item 1
+      console.table(carros);
+
+      const carro = carros.shift(); // tiro da tabela e já coloco em variável
+
+      console.log(carro);
     </script>
   </head>
   <body></body>
