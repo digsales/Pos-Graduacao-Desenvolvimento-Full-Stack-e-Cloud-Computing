@@ -40,6 +40,14 @@ function dividir(n1, n2) {
   }
 }
 
-const exemplo = function (n1, n2) {
+// outra maneira de declarar funções
+
+const exemplo1 = function (n1, n2) {
   return n1 + n2;
-}; // outra maneira de declarar funções
+};
+
+const exemplo2 = (n1, n2) => {
+  return n1 + n2;
+}; // arrow function
+
+const exemplo3 = (n1, n2) => n1 + n2; // arrow function de uma linha
