@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Notas</title>
+    <script>
+      const notas = [];
+      const qtd = Number(prompt("Digite a quantidade de notas:"));
+
+      for (let i = 0; i < qtd; i++) {
+        let nota;
+        do {
+          nota = Number(prompt(`Digite a nota ${i + 1}:`));
+        } while (nota > 10 || nota < 0);
+        notas.push(nota);
+      }
+      console.table(notas);
+    </script>
+  </head>
+  <body></body>
+</html>
