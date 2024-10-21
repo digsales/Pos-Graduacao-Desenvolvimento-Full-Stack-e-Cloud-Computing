@@ -14,13 +14,45 @@
         [8, 6, 3, 10],
       ];
 
-      console.table(nomes);
-      console.table(idades);
-      console.table(notas);
+      // console.table(nomes);
+      // console.table(idades);
+      // console.table(notas);
 
-      console.log(nomes[0]);
-      console.log(idades[3]);
-      console.log(notas[1][2]);
+      // console.log(nomes[0]);
+      // console.log(idades[3]);
+      // console.log(notas[1][2]); // escolher item dentro do array dentro do array
+      const pessoa = {
+        nome: "Diogo",
+        telefone: "(61) 984212998",
+        endereço: "A",
+      };
+
+      const pessoas = [
+        {
+          nome: "Diogo Sales",
+          telefone: "(61) 999999999",
+          endereço: "A",
+        },
+        {
+          nome: "Maria",
+          telefone: "(61) 888888888",
+          endereço: "B",
+        },
+        {
+          nome: "José",
+          telefone: "(61) 777777777",
+          endereço: "C",
+        },
+        {
+          nome: "Antônio",
+          telefone: "(61) 666666666",
+          endereço: "D",
+        },
+      ];
+
+      console.table(pessoas);
+      console.log(pessoas[2].nome); // escolher atributo dentro do objeto dentro do array
+      console.log(pessoas[2]["nome"]);
     </script>
   </head>
   <body></body>
