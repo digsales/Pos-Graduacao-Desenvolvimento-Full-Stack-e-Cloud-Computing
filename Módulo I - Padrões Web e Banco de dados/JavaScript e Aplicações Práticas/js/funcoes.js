@@ -32,5 +32,10 @@ function multiplicar(n1, n2) {
   return Number(n1) * Number(n2);
 }
 function dividir(n1, n2) {
-  return Number(n1) / Number(n2);
+  if (n2 == 0) {
+    console.error("ERROR! Não é possível dividir número por 0.");
+    return "ERROR!";
+  } else {
+    return Number(n1) / Number(n2);
+  }
 }
