@@ -1,32 +1,36 @@
-function somar() {
-  const n1 = Number(document.getElementById("n1").value);
-  const n2 = Number(document.getElementById("n2").value);
+function calcular(operacao) {
+  const n1 = document.getElementById("n1").value;
+  const n2 = document.getElementById("n2").value;
 
-  const soma = n1 + n2;
+  let resultado;
 
-  document.getElementById("resultado").innerHTML = `Resultado: ${soma}`;
+  switch (operacao) {
+    case "+":
+      resultado = somar(n1, n2);
+      break;
+    case "-":
+      resultado = subtrair(n1, n2);
+      break;
+    case "*":
+      resultado = multiplicar(n1, n2);
+      break;
+    case "/":
+      resultado = dividir(n1, n2);
+      break;
+  }
+
+  document.getElementById("resultado").innerHTML = `Resultado: ${resultado}`;
 }
-function subtrair() {
-  const n1 = Number(document.getElementById("n1").value);
-  const n2 = Number(document.getElementById("n2").value);
 
-  const subtracao = n1 - n2;
-
-  document.getElementById("resultado").innerHTML = `Resultado: ${subtracao}`;
+function somar(n1, n2) {
+  return Number(n1) + Number(n2);
 }
-function multiplicar() {
-  const n1 = Number(document.getElementById("n1").value);
-  const n2 = Number(document.getElementById("n2").value);
-
-  const multiplicacao = n1 * n2;
-
-  document.getElementById("resultado").innerHTML = `Resultado: ${multiplicacao}`;
+function subtrair(n1, n2) {
+  return Number(n1) - Number(n2);
 }
-function dividir() {
-  const n1 = Number(document.getElementById("n1").value);
-  const n2 = Number(document.getElementById("n2").value);
-
-  const divisao = n1 / n2;
-
-  document.getElementById("resultado").innerHTML = `Resultado: ${divisao.toFixed()}`;
+function multiplicar(n1, n2) {
+  return Number(n1) * Number(n2);
+}
+function dividir(n1, n2) {
+  return Number(n1) / Number(n2);
 }
