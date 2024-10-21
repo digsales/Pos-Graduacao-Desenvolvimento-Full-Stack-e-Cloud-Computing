@@ -4,7 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Funções</title>
-    <script></script>
+    <script>
+      function somar() {
+        const n1 = Number(document.getElementById("n1").value);
+        const n2 = Number(document.getElementById("n2").value);
+
+        const soma = n1 + n2;
+
+        const resultado = document.getElementById("resultado");
+        resultado.innerHTML = `Resultado: ${soma}`;
+
+        // Outra Opção para realizar o passo acima:
+        // document.getElementById("resultado").innerHTML = `Resultado: ${soma}`;
+      }
+      function subtrair() {
+        const n1 = Number(document.getElementById("n1").value);
+        const n2 = Number(document.getElementById("n2").value);
+
+        const subtracao = n1 - n2;
+
+        document.getElementById("resultado").innerHTML = `Resultado: ${subtracao}`;
+      }
+      function multiplicar() {
+        const n1 = Number(document.getElementById("n1").value);
+        const n2 = Number(document.getElementById("n2").value);
+
+        const multiplicacao = n1 * n2;
+
+        document.getElementById("resultado").innerHTML = `Resultado: ${multiplicacao}`;
+      }
+      function dividir() {
+        const n1 = Number(document.getElementById("n1").value);
+        const n2 = Number(document.getElementById("n2").value);
+
+        const divisao = n1 / n2;
+
+        document.getElementById("resultado").innerHTML = `Resultado: ${divisao.toFixed()}`;
+      }
+    </script>
   </head>
-  <body></body>
+  <body>
+    <form action="">
+      N1: <input id="n1" type="text" />
+      <br />
+      N2: <input id="n2" type="text" />
+      <br />
+      <button type="button" onclick="somar()">Somar</button>
+      <button type="button" onclick="subtrair()">Subtrair</button>
+      <button type="button" onclick="multiplicar()">Multiplicar</button>
+      <button type="button" onclick="dividir()">Dividir</button>
+    </form>
+    <h1 id="resultado">O resultado de sua operação aparecerá aqui.</h1>
+  </body>
 </html>
