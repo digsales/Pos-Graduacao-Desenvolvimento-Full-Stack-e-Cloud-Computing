@@ -4,11 +4,7 @@ function somar() {
 
   const soma = n1 + n2;
 
-  const resultado = document.getElementById("resultado");
-  resultado.innerHTML = `Resultado: ${soma}`;
-
-  // Outra Opção para realizar o passo acima:
-  // document.getElementById("resultado").innerHTML = `Resultado: ${soma}`;
+  document.getElementById("resultado").innerHTML = `Resultado: ${soma}`;
 }
 function subtrair() {
   const n1 = Number(document.getElementById("n1").value);
