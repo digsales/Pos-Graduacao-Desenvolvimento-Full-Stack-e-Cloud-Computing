@@ -29,7 +29,18 @@ function exibir() {
     tabela += "<tr>";
 
     for (let c = 0; c < 3; c++) {
-      tabela += `<td>${c + 1}, ${l + 1}</td>`;
+      switch (tabuleiro[l][c]) {
+        case -1:
+          marcador = "<span style='color: red; font-size: 40px;'>X</span>";
+          break;
+        case 1:
+          marcador = "<span style='color: blue; font-size: 40px;'>O</span>";
+          break;
+        default:
+          marcador = `<span style="color: lightgray">${c + 1}, ${l + 1}</span>`;
+      }
+
+      tabela += `<td>${marcador}</td>`;
     }
 
     tabela += "<tr>";
@@ -40,6 +51,34 @@ function exibir() {
   board.innerHTML = tabela;
 }
 
-function jogar() {}
+function jogar() {
+  linha = document.getElementById("linha").value - 1;
+  coluna = document.getElementById("coluna").value - 1;
+
+  if (tabuleiro[linha][coluna] == 0) {
+    if (jogador % 2 != 0) {
+      tabuleiro[linha][coluna] = -1;
+    } else {
+      tabuleiro[linha][coluna] = 1;
+    }
+
+    aviso.innerHTML = `Vez do jogador: ${numeroJogador()}`;
+
+    jogador++;
+
+    document.getElementById("linha").value = null; // limpar input
+    document.getElementById("coluna").value = null; // limpar input
+
+    console.table(tabuleiro);
+  } else {
+    alert("Esse campo já foi marcado!");
+  }
+
+  exibir();
+}
+
+function numeroJogador() {
+  return (jogador % 2) + 1;
+}
 
 function checar() {}
