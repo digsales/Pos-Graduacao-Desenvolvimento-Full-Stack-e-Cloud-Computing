@@ -75,10 +75,39 @@ function jogar() {
   }
 
   exibir();
+  checar();
 }
 
 function numeroJogador() {
   return (jogador % 2) + 1;
 }
 
-function checar() {}
+function checar() {
+  // Linhas
+  for (let l = 0; l < 3; l++) {
+    let soma = 0;
+    soma = tabuleiro[l][0] + tabuleiro[l][1] + tabuleiro[l][2];
+
+    if (soma == 3 || soma == -3) {
+      aviso.innerHTML = `<span style="color: green; font-size: 30px">O jogador ${numeroJogador()} ganhou!</span>`;
+    }
+  }
+
+  // Colunas
+  for (let c = 0; c < 3; c++) {
+    let soma = 0;
+    soma = tabuleiro[0][c] + tabuleiro[1][c] + tabuleiro[2][c];
+
+    if (soma == 3 || soma == -3) {
+      aviso.innerHTML = `<span style="color: green; font-size: 30px">O jogador ${numeroJogador()} ganhou!</span>`;
+    }
+  }
+
+  // Diagonis
+  let soma1 = tabuleiro[0][0] + tabuleiro[1][1] + tabuleiro[2][2];
+  let soma2 = tabuleiro[0][2] + tabuleiro[1][1] + tabuleiro[2][0];
+
+  if (soma1 == 3 || soma1 == -3 || soma2 == 3 || soma2 == -3) {
+    aviso.innerHTML = `<span style="color: green; font-size: 30px">O jogador ${numeroJogador()} ganhou!</span>`;
+  }
+}
