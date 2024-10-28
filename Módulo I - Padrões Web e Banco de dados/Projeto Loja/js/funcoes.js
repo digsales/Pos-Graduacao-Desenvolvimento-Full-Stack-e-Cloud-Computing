@@ -4,6 +4,7 @@ function adicionar(produto) {
   const total = document.getElementById(`total_${produto}`);
 
   qtd.innerHTML++;
+  total.innerHTML = (Number(total.innerHTML) + Number(valor.innerHTML)).toFixed(2);
 }
 function subtrair(produto) {
   const qtd = document.getElementById(`qtd_${produto}`);
@@ -12,5 +13,6 @@ function subtrair(produto) {
 
   if (qtd.innerHTML > 0) {
     qtd.innerHTML--;
+    total.innerHTML = (Number(total.innerHTML) - Number(valor.innerHTML)).toFixed(2);
   }
 }
