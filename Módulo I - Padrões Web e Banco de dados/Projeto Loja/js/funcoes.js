@@ -24,10 +24,3 @@ function subtrair(produto) {
     subtotal.innerHTML = (Number(subtotal.innerHTML) - Number(valor.innerHTML)).toFixed(2);
   }
 }
-
-const subtotal = document.getElementById(`subtotal`);
-const total_1 = document.getElementById(`total_1`);
-const total_2 = document.getElementById(`total_2`);
-const total_3 = document.getElementById(`total_3`);
-
-subtotal.innerHTML = (Number(total_1.innerHTML) + Number(total_1.innerHTML) + Number(total_3.innerHTML)).toFixed(2);
