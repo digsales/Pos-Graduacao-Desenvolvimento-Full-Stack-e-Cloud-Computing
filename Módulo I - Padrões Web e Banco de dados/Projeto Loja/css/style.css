@@ -1,0 +1,14 @@
+:root {
+  --primary-color: rgb(0, 132, 255);
+  --secondary-color: rgb(0, 162, 255);
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+footer {
+  background-color: var(--primary-color);
+  color: white;
+}
