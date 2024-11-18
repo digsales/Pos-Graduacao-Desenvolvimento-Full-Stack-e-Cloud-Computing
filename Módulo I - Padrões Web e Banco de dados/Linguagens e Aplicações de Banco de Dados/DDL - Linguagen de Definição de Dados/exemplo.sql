@@ -12,3 +12,4 @@ ALTER TABLE cliente ADD uf char(2);
 -- ALTER TABLE cliente RENAME COLUMN estadocivil TO estado_civil
 ALTER TABLE cliente DROP estadocivil;
 ALTER TABLE cliente ADD estado_civil char(2);
+ALTER TABLE cliente ALTER COLUMN estado_civil char(1);
