@@ -8,3 +8,4 @@ CREATE TABLE cliente(
 );
 
 ALTER TABLE cliente DROP estado;
+ALTER TABLE cliente ADD uf char(2);
