@@ -5,4 +5,4 @@ CREATE TABLE cliente(
   sexo char(1),
   estado char(2),
   estadocivil char(2)
-)
+);
