@@ -1,0 +1,1 @@
+ALTER TABLE carro ADD ano INT;
