@@ -1,8 +1,6 @@
-CREATE TABLE cliente(
-  codcliente INT PRIMARY KEY,
-  nome varchar(50) NOT NULL,
-  cidade vcarchar (50),
-  sexo char(1),
-  estado char(2),
-  estadocivil char(2)
+CREATE TABLE carro(
+  codcarro INT PRIMARY KEY,
+  modelo varchar(50) NOT NULL,
+  placa vcarchar (50),
+  cor char(1)
 );
