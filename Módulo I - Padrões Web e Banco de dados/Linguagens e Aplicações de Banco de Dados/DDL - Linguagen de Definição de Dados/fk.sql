@@ -8,6 +8,5 @@ CREATE TABLE endereco (
   uf CHAR(2) NOT NULL,
   cidade VARCHAR(50) NOT NULL,
   bairro VARCHAR(50),
-  codcliente INT,
-  FOREIGN KEY (codcliente) REFERENCES cliente.codcliente
+  codcliente INT REFERENCES cliente(codcliente)
 )
