@@ -22,3 +22,11 @@ INSERT INTO cliente VALUES (
   "RJ",
   "C"
 );
+
+INSERT INTO cliente (
+  codcliente,
+  nome
+) VALUES (
+  3,
+  "Pedro"
+);
