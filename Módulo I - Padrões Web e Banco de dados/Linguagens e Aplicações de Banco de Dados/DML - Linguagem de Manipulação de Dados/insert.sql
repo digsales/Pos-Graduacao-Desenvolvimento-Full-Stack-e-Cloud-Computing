@@ -1,3 +1,5 @@
+-- Primeira maneira
+
 INSERT INTO cliente (
   codcliente,
   nome,
@@ -14,6 +16,8 @@ INSERT INTO cliente (
   "C"
 );
 
+-- Maneira simplificada
+
 INSERT INTO cliente VALUES (
   1,
   "Ana Silva",
@@ -22,6 +26,8 @@ INSERT INTO cliente VALUES (
   "RJ",
   "C"
 );
+
+-- Os dados que não foram selecionados serão NULL
 
 INSERT INTO cliente (
   codcliente,
