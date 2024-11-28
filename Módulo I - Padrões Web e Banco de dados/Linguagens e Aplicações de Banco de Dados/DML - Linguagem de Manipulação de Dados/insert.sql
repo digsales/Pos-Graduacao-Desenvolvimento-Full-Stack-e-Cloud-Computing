@@ -13,6 +13,7 @@ INSERT INTO cliente (
   "RJ",
   "C"
 );
+
 INSERT INTO cliente VALUES (
   1,
   "Ana Silva",
