@@ -2,3 +2,9 @@
 SELECT *
   FROM cliente, endereco
   WHERE cliente.codcliente = endereco.codcliente;
+
+-- INNER JOIN faz o mesmo de cima de uma maneira mais eficiente
+SELECT *
+  FROM cliente
+  INNER JOIN endereco ON
+  endereco.codcliente = cliente.codcliente;
