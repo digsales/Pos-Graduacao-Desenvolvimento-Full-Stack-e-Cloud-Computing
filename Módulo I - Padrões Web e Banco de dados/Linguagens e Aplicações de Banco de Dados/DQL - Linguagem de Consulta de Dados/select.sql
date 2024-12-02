@@ -9,3 +9,9 @@ SELECT nome
 SELECT idade
   FROM cliente
   WHERE nome = "Lucas";
+
+-- Selecionando a coluna idade, da tabela cliente, onde o nome é igual a Lucas, e mostrando em ordem ascendente.
+SELECT idade
+  FROM cliente
+  WHERE nome = "Lucas"
+  ORDER BY idade ASC;
