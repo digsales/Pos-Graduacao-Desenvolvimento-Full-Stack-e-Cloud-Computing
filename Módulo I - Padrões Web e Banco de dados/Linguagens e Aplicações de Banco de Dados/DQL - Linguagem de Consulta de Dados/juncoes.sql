@@ -8,3 +8,12 @@ SELECT DISTINCT cliente.nome, endereco.uf
   FROM cliente
   INNER JOIN endereco ON
   endereco.codcliente = cliente.codcliente;
+
+-- Seleciona coluna nome e uf, das tabelmas cliente e endereco, respectivamente, onde a FK e a PK são iguais em ambas, o estado civil do cliente seja "C", casado, e sua uf seja "RJ", Rio de Janeiro.
+SELECT DISTINCT cliente.nome, endereco.uf
+  FROM cliente
+  INNER JOIN endereco ON
+  endereco.codcliente = cliente.codcliente
+  WHERE cliente.estado_civil = "C"
+  AND endereco.uf = "RJ"
+  ORDER BY cliente.nome
