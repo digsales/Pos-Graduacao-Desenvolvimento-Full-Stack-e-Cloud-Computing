@@ -17,3 +17,12 @@ SELECT DISTINCT cliente.nome, endereco.uf
   WHERE cliente.estado_civil = "C"
   AND endereco.uf = "RJ"
   ORDER BY cliente.nome
+
+-- Usando o AS, para digitar menos e deixar o código mais limpo
+SELECT DISTINCT c.nome, e.uf
+  FROM cliente AS c
+  INNER JOIN endereco AS e ON
+  e.codcliente = c.codcliente
+  WHERE c.estado_civil = "C"
+  AND e.uf = "RJ"
+  ORDER BY c.nome
