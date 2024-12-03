@@ -26,3 +26,9 @@ SELECT DISTINCT c.nome, e.uf
   WHERE c.estado_civil = "C"
   AND e.uf = "RJ"
   ORDER BY c.nome
+
+-- LEFT JOIN, ele traz os clientes mesmo que eles não tenham aluguel.
+SELECT cl.nome, al.dataaluguel
+  FROM cliente AS cl
+  LEFT JOIN aluguel AS al
+  ON cl.codcliente = al.codcliente;
