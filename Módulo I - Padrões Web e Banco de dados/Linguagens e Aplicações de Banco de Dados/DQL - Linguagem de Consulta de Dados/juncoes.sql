@@ -32,3 +32,9 @@ SELECT cl.nome, al.dataaluguel
   FROM cliente AS cl
   LEFT JOIN aluguel AS al
   ON cl.codcliente = al.codcliente;
+
+-- RIGHT JOIN, ele traz os alugueis mesmo que eles não tenham clientes, dá prioridade aos dados da direita.
+SELECT cl.nome, al.dataaluguel
+  FROM cliente AS cl
+  RIGHT JOIN aluguel AS al
+  ON cl.codcliente = al.codcliente;
