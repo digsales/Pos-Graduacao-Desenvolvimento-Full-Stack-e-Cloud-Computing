@@ -27,7 +27,7 @@ SELECT DISTINCT c.nome, e.uf
   AND e.uf = "RJ"
   ORDER BY c.nome
 
--- LEFT JOIN, ele traz os clientes mesmo que eles não tenham aluguel.
+-- LEFT JOIN, ele traz os clientes mesmo que eles não tenham aluguel, dá prioridade aos dados da esquerda.
 SELECT cl.nome, al.dataaluguel
   FROM cliente AS cl
   LEFT JOIN aluguel AS al
