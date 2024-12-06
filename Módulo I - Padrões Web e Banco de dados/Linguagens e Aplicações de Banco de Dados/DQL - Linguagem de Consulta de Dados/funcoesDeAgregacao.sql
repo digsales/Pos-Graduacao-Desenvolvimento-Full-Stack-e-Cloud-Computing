@@ -7,3 +7,7 @@ SELECT sexo, COUNT(codcliente)
 -- Valor maximo
 SELECT MAX(preco)
   FROM acessorio;
+
+-- Valor mínimo
+SELECT MIN(preco)
+  FROM acessorio;
