@@ -11,3 +11,7 @@ SELECT MAX(preco)
 -- Valor mínimo
 SELECT MIN(preco)
   FROM acessorio;
+
+-- Média aritimética
+SELECT AVG(preco)
+  FROM acessorio;
