@@ -2,4 +2,8 @@
 SELECT sexo, COUNT(codcliente)
   FROM cliente
   GROUP BY sexo
-  HAVING sexo IS NOT NULL
+  HAVING sexo IS NOT NULL;
+
+-- Valor maximo
+SELECT MAX(preco)
+  FROM acessorio;
