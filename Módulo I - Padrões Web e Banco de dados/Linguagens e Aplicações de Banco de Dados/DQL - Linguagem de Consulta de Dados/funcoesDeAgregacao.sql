@@ -23,4 +23,12 @@ SELECT DISTINCT id_turma
 UNION
 SELECT id_aluno
   FROM aluno
-  WHERE uf = "DF"
+  WHERE uf = "DF";
+
+-- INTERSECT mostra a intersecção, ou seja, os dados em comum
+SELECT nome_aluno
+  FROM aluno
+INTERSECT
+SELECT nome_aluno
+  FROM aluno
+  WHERE uf = "RJ";
