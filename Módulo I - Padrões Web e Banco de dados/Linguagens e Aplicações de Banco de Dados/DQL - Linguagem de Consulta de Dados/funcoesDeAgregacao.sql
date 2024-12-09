@@ -15,3 +15,12 @@ SELECT MIN(preco)
 -- Média aritimética
 SELECT AVG(preco)
   FROM acessorio;
+
+-- UNION mostra a união de ambos resultados
+SELECT DISTINCT id_turma
+  FROM boletim
+  WHERE id_turma = 1
+UNION
+SELECT id_aluno
+  FROM aluno
+  WHERE uf = "DF"
