@@ -18,3 +18,5 @@ CREATE OR REPLACE VIEW vw_alunos_df AS
   SELECT nome
     FROM aluno
     WHERE uf="DF";
+
+-- Visões são apenas para visualização, não conseguimos inserir, alterar ou excluir dados.
